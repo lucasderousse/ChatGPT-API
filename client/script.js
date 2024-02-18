@@ -78,10 +78,10 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://mintgpt.onrender.com/', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({
       prompt: data.get('prompt')
@@ -106,6 +106,8 @@ const handleSubmit = async (e) => {
 }
 
 form.addEventListener('submit', handleSubmit);
+
+// Potential error caused by usage, further evaulation when fully functional!
 form.addEventListener('keyup', (e) => {
   if (e.keyCode === 13)
     handleSubmit(e);
