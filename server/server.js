@@ -3,6 +3,9 @@ import * as dotenv from 'dotenv'
 import cors from 'cors'
 import OpenAI from 'openai'; // { Configuration, OpenAIApi } from 'openai'
 
+Access-Control-Allow-Origin;
+
+
 dotenv.config()
 
 const openai = new OpenAI({
